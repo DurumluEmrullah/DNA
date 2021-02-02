@@ -14,7 +14,7 @@ int main(){
 	int desDNA[]={1,1,1,3,1,3,3,1,1,0};
 	loc= dnaFind(DNA,desDNA,100);
 	
-	printf("**************************** DNA  HARITASI ************************************************\n");
+	printf("**************************** DNA  MAP ************************************************\n");
 	for(;i<50;i++){
 		for(j=0;j<50;j++){
 	
@@ -24,10 +24,10 @@ int main(){
 	}	
 	printf("*********************************************************************************************\n");
 	
-	printf("\n**************************** Sonuclar *********************************************************\n");
+	printf("\n**************************** Results *********************************************************\n");
 	if(loc.x != -1){
 		loc.sim=0;
-		printf("Eslesen parca : ");
+		printf("Matching : ");
 		j=0;
 		for(i=loc.y;i<loc.y+10;i++){
 			printf("%d ",DNA[loc.x][i]);
@@ -39,7 +39,7 @@ int main(){
 		printf("\n%d th line has the similarity in the locaions between %d - %d and the similarity %d percent\n",loc.x+1,loc.y+1,loc.y+11,loc.sim);
 	}
 	else{
-		printf("Benzerlik bulunamadi !!!\n");
+		printf("Similarity not found !!!\n");
 	}
 	
 	printf("*********************************************************************************************");
